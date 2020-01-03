@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Article>
+@{
+    Layout = null;
+}
+
+<div class="widget posts">
+    <h5>Posts</h5>
+    <div class="widget-tabs">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#popular" data-toggle="tab">Popular</a></li>
+            <li><span>/</span></li>
+            <li><a href="#fresh" data-toggle="tab">Fresh</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="popular">
+                <ul>
+                    @foreach (Article item in ViewBag.rec)
+                    {
+
+                        <li>
+                            <figure>
+                                <a  asp-action="Read" asp-controller="Blog" asp-route-id="@item.Id">
+                                    <img src="@item.Image.SPath" alt="">
+                                </a>
+                            </figure>
+                            <div class="text">
+                                <a style="color:black" asp-action="Read" asp-controller="Blog" asp-route-id="@item.Id">@item.Head.</a>
+                                <a  asp-action="Blog" asp-controller="Category"
+asp-route-id="@item.CategoryId" class="category">{ @item.Category.Name }</a>
+                            </div>
+                        </li>
+                      
+
+                    }
+                </ul>
+            </div>
+            <div class="tab-pane" id="fresh">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <figure>
+                                <a asp-action="Read" asp-controller="Blog" asp-route-id="@item.Id">
+                                    <img src="@item.Image.SPath" alt="">
+                                </a>
+                            </figure>
+                            <div class="text">
+                                <a style="color:black" asp-action="Read" asp-controller="Blog" asp-route-id="@item.Id">@item.Head.</a>
+                                <a  asp-action="Blog" asp-controller="Category"
+asp-route-id="@item.CategoryId" class="category">{ @item.Category.Name }</a>
+                            </div>
+                        </li>
+                    }
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Add";
+}
+<div class="col-sm-9">
+    <div class="featured-box featured-box-primary align-left mt-xlg" style="height: 400px;">
+        <div class="box-content">
+            <h4 class="heading-primary text-uppercase mb-md">Category Add</h4>
+            <form asp-action="Add" asp-controller="Category" id="frmSignUp" method="post">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control input-lg">
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="submit" value="Added" class="btn btn-success form-control" data-loading->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

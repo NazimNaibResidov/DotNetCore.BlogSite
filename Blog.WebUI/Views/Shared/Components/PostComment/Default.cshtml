@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Comment>
+@{
+    Layout = null;
+}
+<div class="comments">
+    <h3>
+       @Model.Count()
+    </h3>
+    <ul>
+        <li class="comment">
+            <div class="user">
+                <figure>
+                    <a href="#">
+                        <img src="content/user01.png" alt="">
+                    </a>
+                </figure>
+                <div class="name text-center">
+                    <a href="#">Thisis Stan</a>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="info">
+                    <div class="time-ago">24 minutes ago</div>
+                </div>
+                <div class="text">
+                    Jelly I love apple pie tart tootsie roll tiramisu bonbon I love.
+                    I love I love cookie cotton candy. Danish candy muffin lollipop. Chocolate
+                </div>
+                <div class="likes">
+                    <a href="#">
+                        <i class="fa fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+

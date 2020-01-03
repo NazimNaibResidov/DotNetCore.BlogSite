@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cleanse</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="~/content/favicon.png">
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/typicons.css">
+    <link rel="stylesheet" href="~/css/flexslider.css">
+    <link rel="stylesheet" href="~/css/jquery.selectBoxIt.css">
+    <link rel="stylesheet" href="~/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    @RenderSection("head",false)
+    <script src="~/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    @await Component.InvokeAsync("HeaderMenu")
+    <header class="mobile-logo visible-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="logo">
+                        <figure>
+                            <a href="index.html"><img src="content/logo.png" alt="Logo" /></a>
+                        </figure>
+                    </div>
+                    <div class="mobile-search">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="s" placeholder="Search something interesting">
+                                <span class="input-group-addon"><button type="submit"><i class="fa fa-search"></i></button></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Our Blog</h1>
+                    <h4>Cookie marshmallow brownie apple pie I love I love pie.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-container">
+        <div class="container">
+            <div class="row">
+               
+                        @RenderBody()
+
+                       
+                        <aside class="col-sm-4">
+                            <div class="widgets">
+     @await Component.InvokeAsync("CategoryMenu")
+     @await Component.InvokeAsync("PopularRecent")
+     @await Component.InvokeAsync("PortfolioMenu")
+
+                                
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+              
+              
+         
+    </section>
+    @await  Component.InvokeAsync("FooterMenu")
+    <div class="go-top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <script src="~/js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+    <script src="~/js/vendor/jquery.isotope.min.js"></script>
+    <script src="~/js/vendor/jquery.isotope.perfectmasonry.js"></script>
+    <script src="~/js/vendor/jquery.raty.min.js"></script>
+    <script src="~/js/vendor/jquery.flexslider.js"></script>
+    <script src="~/js/vendor/jquery.mousewheel.js"></script>
+    <script src="~/js/vendor/jquery.mCustomScrollbar.js"></script>
+    <script src="~/js/vendor/jquery.hoverdir.js"></script>
+    <script src="~/js/vendor/jquery.selectBoxIt.min.js"></script>
+    <script src="~/js/vendor/jquery.fancybox.pack.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Category>
+@{
+    Layout = null;
+}
+
+<div class="widget categories">
+    <h5>Categories</h5>
+    <ul>
+       @foreach (var item in Model)
+       {
+        <li><a style="color:black;font:bolder" asp-action="Blog" asp-controller="Category"
+asp-route-id="@item.Id" >@item.Name &amp;   (@item.Articles.Count)</a></li>
+       }
+        
+    </ul>
+</div>
+
+  

@@ -1,0 +1,22 @@
+﻿@model User
+@{
+    Layout = null;
+}
+
+<div class="post-block post-author clearfix">
+    <h3 class="heading-primary"><i class="fa fa-user"></i>Author</h3>
+    <div class="img-thumbnail">
+        <a href="blog-post.html">
+            <img src="@Model.Image.UserPath" alt="">
+        </a>
+    </div>
+    <p><strong class="name"><a href="Javascrip:void(0)">@Model.Name @Model.Surname</a></strong>
+       <br />
+</p>
+    <p>
+        Since 2012
+        .Net programmer
+        excuse
+        messed up.
+    </p>
+</div>

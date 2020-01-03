@@ -1,0 +1,22 @@
+﻿@model int 
+@{
+    Layout = null;
+}
+
+<div class="write-comment not-loggedin">
+    <h3>Write a comment</h3>
+    <div class="textarea-wrap">
+        <form action="#">
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                    <input type="text" class="form-control" name="email" placeholder="email">
+                    <input type="text" class="form-control" name="website" placeholder="website">
+                </div>
+            </div>
+            <textarea placeholder="write something smart" name="comment-message"></textarea>
+            <button type="submit" class="send">Send</button>
+        </form>
+    </div>
+    <hr>
+</div>

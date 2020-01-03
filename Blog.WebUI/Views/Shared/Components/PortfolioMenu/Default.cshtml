@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Image>
+@{
+    Layout = null;
+}
+<div class="widget portfolio text-center">
+    <h5>Portfolio</h5>
+   
+    <div class="portfolio-slider">
+
+        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+            <ul class="slides" style="width: 1200%; transition-duration: 0.6s; transform: translate3d(-990px, 0px, 0px);">
+                
+               @foreach (var item in Model)
+               {
+                <li class="clone" style="width: 330px; float: left; display: block;">
+                    <figure>
+                        <a href="javascrip:void(0)">
+                            <img src="@item.SPath" draggable="false">
+                        </a>
+                    </figure>
+                </li>
+               }
+            </ul>
+        </div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="">2</a></li><li><a class="flex-active">3</a></li><li><a class="">4</a></li></ol>
+    </div>
+</div>

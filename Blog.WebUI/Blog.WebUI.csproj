@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+   
+   </PropertyGroup>
+  <ItemGroup>
+   
+
+    <!-- Keep this -->
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    
+ 
+    
+  <PackageReference Include="LazZiya.ImageResize" Version="2.0.0" />
+    
+ 
+    
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0005" />
+  </ItemGroup>
+  
+ 
+
+  
+ 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\blog\bpath\" />
+    <Folder Include="wwwroot\blog\mpath\" />
+    <Folder Include="wwwroot\blog\upath\" />
+    <Folder Include="wwwroot\blog\spath\" />
+  </ItemGroup>
+
+  
+ 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Data\Blog.Data.csproj" />
+    <ProjectReference Include="..\Blog.Entity\Blog.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
